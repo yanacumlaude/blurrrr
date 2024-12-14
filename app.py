@@ -9,8 +9,34 @@ def apply_blur(image, blur_strength):
 
 # Fungsi untuk halaman pertama
 def page_home():
+    # Menampilkan logo kampus di atas halaman
+    st.image("images/logopu.jpg", caption="Logo Kampus", use_container_width=True)
+
     st.title("Aplikasi Efek Blur pada Gambar")
     st.write("Selamat datang di aplikasi efek blur. Pilih halaman di sidebar untuk melanjutkan.")
+
+    # Menampilkan tombol untuk anggota tim
+    st.subheader("Anggota Tim")
+
+    # Membuat tata letak dengan kolom untuk tombol dan foto anggota
+    col1, col2 = st.columns(2)  # Kolom untuk anggota pertama dan kedua
+    with col1:
+        if st.button("Ciwam"):
+            st.image("images/ciwam.jpg", caption="Ciwam", use_container_width=True)
+    with col2:
+        if st.button("Hanida"):
+            st.image("images/hanida.jpg", caption="Hanida", use_container_width=True)
+
+    col3, col4 = st.columns(2)  # Kolom untuk anggota ketiga dan keempat
+    with col3:
+        if st.button("Laven"):
+            st.image("images/laven.jpg", caption="Laven", use_container_width=True)
+    with col4:
+        if st.button("Yana"):
+            st.image("images/yana.jpg", caption="Yana", use_container_width=True)
+
+
+
 
 # Fungsi untuk halaman efek blur
 def page_blur():
